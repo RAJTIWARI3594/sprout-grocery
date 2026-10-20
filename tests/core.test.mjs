@@ -1,0 +1,10 @@
+import test from 'node:test'; import assert from 'node:assert/strict';
+import {money,countItems,basketTotal,mergeCart,validCart} from '../sprout/static/core.mjs';
+test('currency uses paise',()=>assert.equal(money(4950),'₹49.50'));
+test('cart item count',()=>assert.equal(countItems([{quantity:2},{quantity:3}]),5));
+test('basket sum in integer paise',()=>assert.equal(basketTotal([{product_id:1,quantity:3}],[{id:1,price:4900}]),14700));
+test('missing product does not crash',()=>assert.equal(basketTotal([{product_id:99,quantity:3}],[]),0));
+test('merge quantities',()=>assert.deepEqual(mergeCart([{product_id:1,quantity:2}],[{product_id:1,quantity:3}]),[{product_id:1,quantity:5}]));
+test('merged cart cap',()=>assert.equal(mergeCart([{product_id:1,quantity:19}],[{product_id:1,quantity:5}])[0].quantity,20));
+test('valid cart',()=>assert.ok(validCart([{product_id:1,quantity:2}])));
+for(const v of [null,{},[{product_id:1,quantity:0}],[{product_id:1,quantity:1.5}],[{product_id:'1',quantity:2}]]) test('invalid local cart '+JSON.stringify(v),()=>assert.equal(validCart(v),false));

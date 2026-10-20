@@ -1,0 +1,22 @@
+{
+  "checks": [
+    "Catalog: 20 products loaded from backend",
+    "Categories and case-insensitive live search",
+    "Guest basket survives reload",
+    "Registration, session cookie and guest-to-account basket merge",
+    "Customer admin API access refused (403)",
+    "Demo order placed; server-priced snapshot displayed; basket cleared",
+    "Order history and authenticated session survive page reload",
+    "Logout and password login",
+    "Admin inventory price and stock persisted through protected endpoint",
+    "Admin advances demo order workflow",
+    "Storefront reflects admin update",
+    "390px mobile storefront and dialog fit without horizontal page overflow",
+    "Stored markup in name/address rendered as text, not executable HTML",
+    "No uncaught browser JavaScript errors"
+  ],
+  "passed": 14,
+  "page_errors": [],
+  "browser": "Chromium 140 / Playwright 1.55.0",
+  "simulation_only": true
+}

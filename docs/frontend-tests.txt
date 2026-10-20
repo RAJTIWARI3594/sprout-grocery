@@ -1,0 +1,20 @@
+✔ currency uses paise (15.179894ms)
+✔ cart item count (0.225123ms)
+✔ basket sum in integer paise (0.226768ms)
+✔ missing product does not crash (0.123262ms)
+✔ merge quantities (0.969589ms)
+✔ merged cart cap (0.164036ms)
+✔ valid cart (0.25052ms)
+✔ invalid local cart null (0.117768ms)
+✔ invalid local cart {} (0.128777ms)
+✔ invalid local cart [{"product_id":1,"quantity":0}] (3.66988ms)
+✔ invalid local cart [{"product_id":1,"quantity":1.5}] (0.345142ms)
+✔ invalid local cart [{"product_id":"1","quantity":2}] (0.087235ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 101.221063

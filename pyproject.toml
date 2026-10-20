@@ -1,0 +1,11 @@
+[project]
+name = "sprout-grocery"
+version = "1.0.0"
+description = "Original full-stack grocery portfolio demo"
+requires-python = ">=3.10"
+dependencies = ["Flask==3.1.2"]
+[dependency-groups]
+dev = ["pytest==8.4.2", "playwright==1.55.0"]
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
